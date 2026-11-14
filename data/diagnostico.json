@@ -1,0 +1,440 @@
+{
+ "id": "diagnostico",
+ "titulo": "Teste diagnóstico",
+ "questoes": [
+  {
+   "d": "PV",
+   "t": "A seguridade social compreende um conjunto de ações destinadas a assegurar os direitos relativos à saúde, à previdência e à assistência social.",
+   "o": [
+    "Certo",
+    "Errado"
+   ],
+   "a": 0,
+   "c": "É a definição do art. 194 da Constituição. Seguridade é o gênero; saúde, previdência e assistência são as três espécies."
+  },
+  {
+   "d": "PV",
+   "t": "O acesso às ações e aos serviços públicos de saúde depende de contribuição prévia do usuário.",
+   "o": [
+    "Certo",
+    "Errado"
+   ],
+   "a": 1,
+   "c": "A saúde é direito de todos e dever do Estado (art. 196 da Constituição). Não exige contribuição."
+  },
+  {
+   "d": "PV",
+   "t": "A assistência social é prestada apenas a quem contribuiu para a seguridade social.",
+   "o": [
+    "Certo",
+    "Errado"
+   ],
+   "a": 1,
+   "c": "A assistência social é prestada a quem dela necessitar, independentemente de contribuição (art. 203 da Constituição)."
+  },
+  {
+   "d": "PV",
+   "t": "Qual área da seguridade social tem caráter contributivo e filiação obrigatória?",
+   "o": [
+    "Saúde",
+    "Assistência social",
+    "Previdência social",
+    "As três, igualmente"
+   ],
+   "a": 2,
+   "c": "Só a previdência social é contributiva e de filiação obrigatória (art. 201 da Constituição)."
+  },
+  {
+   "d": "PV",
+   "t": "Uma pessoa maior de 16 anos que não exerce atividade remunerada, como uma dona de casa, pode se filiar ao Regime Geral de Previdência Social como segurada facultativa.",
+   "o": [
+    "Certo",
+    "Errado"
+   ],
+   "a": 0,
+   "c": "O segurado facultativo é quem não exerce atividade que o torne segurado obrigatório e decide contribuir por vontade própria."
+  },
+  {
+   "d": "PV",
+   "t": "Um eletricista autônomo presta serviços por conta própria a várias pessoas, sem vínculo de emprego. No RGPS, ele é:",
+   "o": [
+    "Empregado",
+    "Contribuinte individual",
+    "Trabalhador avulso",
+    "Segurado especial"
+   ],
+   "a": 1,
+   "c": "Quem trabalha por conta própria, sem vínculo de emprego, é contribuinte individual."
+  },
+  {
+   "d": "PV",
+   "t": "O servidor público titular de cargo efetivo, amparado por regime próprio de previdência, é segurado obrigatório do RGPS em razão desse cargo.",
+   "o": [
+    "Certo",
+    "Errado"
+   ],
+   "a": 1,
+   "c": "O servidor efetivo amparado por regime próprio é excluído do RGPS quanto a esse cargo. Só entra no RGPS se exercer outra atividade abrangida por ele."
+  },
+  {
+   "d": "PV",
+   "t": "O pequeno produtor rural que trabalha com a família, em regime de economia familiar e sem empregados permanentes, enquadra-se como:",
+   "o": [
+    "Segurado especial",
+    "Segurado facultativo",
+    "Empregado rural",
+    "Trabalhador avulso"
+   ],
+   "a": 0,
+   "c": "Essa é a descrição do segurado especial, categoria com regras próprias de contribuição e de comprovação da atividade."
+  },
+  {
+   "d": "PV",
+   "t": "Período de carência é o número mínimo de contribuições mensais indispensáveis para que o beneficiário tenha direito ao benefício.",
+   "o": [
+    "Certo",
+    "Errado"
+   ],
+   "a": 0,
+   "c": "É o conceito do art. 24 da Lei 8.213/1991. Nem todo benefício exige carência."
+  },
+  {
+   "d": "PV",
+   "t": "A pensão por morte é paga ao próprio segurado quando ele para de trabalhar.",
+   "o": [
+    "Certo",
+    "Errado"
+   ],
+   "a": 1,
+   "c": "A pensão por morte é paga aos dependentes do segurado que faleceu. O benefício do próprio segurado que para de trabalhar é a aposentadoria."
+  },
+  {
+   "d": "PV",
+   "t": "Qual destes é um benefício assistencial, e não previdenciário?",
+   "o": [
+    "Auxílio por incapacidade temporária",
+    "Salário-maternidade",
+    "Benefício de Prestação Continuada (BPC)",
+    "Aposentadoria por incapacidade permanente"
+   ],
+   "a": 2,
+   "c": "O BPC está na Lei Orgânica da Assistência Social (Lei 8.742/1993) e não exige contribuição. O INSS apenas operacionaliza o pagamento."
+  },
+  {
+   "d": "PV",
+   "t": "O BPC garante um salário mínimo mensal à pessoa com deficiência e ao idoso com 65 anos ou mais que comprovem não ter meios de prover a própria manutenção nem de tê-la provida pela família.",
+   "o": [
+    "Certo",
+    "Errado"
+   ],
+   "a": 0,
+   "c": "É o que prevê o art. 20 da Lei 8.742/1993."
+  },
+  {
+   "d": "PV",
+   "t": "Quem recebe o BPC tem direito ao abono anual (décimo terceiro).",
+   "o": [
+    "Certo",
+    "Errado"
+   ],
+   "a": 1,
+   "c": "O BPC não gera abono anual nem pensão por morte, porque é benefício assistencial. É uma pegadinha clássica."
+  },
+  {
+   "d": "PV",
+   "t": "O cônjuge, o companheiro e o filho menor de 21 anos do segurado são dependentes:",
+   "o": [
+    "De primeira classe, com dependência econômica presumida",
+    "De segunda classe, com dependência a comprovar",
+    "De terceira classe",
+    "Apenas se morarem com o segurado"
+   ],
+   "a": 0,
+   "c": "Eles formam a primeira classe do art. 16 da Lei 8.213/1991, e a dependência econômica é presumida. Pais são a segunda classe e irmãos, a terceira."
+  },
+  {
+   "d": "PV",
+   "t": "Pela regra permanente criada pela Emenda Constitucional 103/2019, a aposentadoria programada do trabalhador urbano exige idade mínima de 65 anos para homens e 62 anos para mulheres.",
+   "o": [
+    "Certo",
+    "Errado"
+   ],
+   "a": 0,
+   "c": "São as idades do art. 201, § 7º, da Constituição após a reforma de 2019, somadas ao tempo mínimo de contribuição."
+  },
+  {
+   "d": "PV",
+   "t": "O auxílio-acidente tem natureza de indenização e pode ser recebido pelo segurado que continua trabalhando.",
+   "o": [
+    "Certo",
+    "Errado"
+   ],
+   "a": 0,
+   "c": "Ele indeniza a sequela que reduz a capacidade para o trabalho habitual (art. 86 da Lei 8.213/1991) e não substitui o salário."
+  },
+  {
+   "d": "LP",
+   "t": "Complete: “Refiro-me ___ servidora que atendeu ___ pessoas ___ partir das oito horas.”",
+   "o": [
+    "à / as / a",
+    "a / às / à",
+    "à / às / a",
+    "a / as / à"
+   ],
+   "a": 0,
+   "c": "“Referir-se a” pede preposição, que se funde com o artigo de “a servidora”: à. “Atender” aqui é transitivo direto: as pessoas. “A partir” nunca leva crase, porque “partir” é verbo."
+  },
+  {
+   "d": "LP",
+   "t": "A frase “Fazem dois anos que ele se aposentou” está de acordo com a norma-padrão.",
+   "o": [
+    "Certo",
+    "Errado"
+   ],
+   "a": 1,
+   "c": "“Fazer” indicando tempo decorrido é impessoal e fica no singular: “Faz dois anos”."
+  },
+  {
+   "d": "LP",
+   "t": "A frase “Houveram muitos pedidos de benefício” está de acordo com a norma-padrão.",
+   "o": [
+    "Certo",
+    "Errado"
+   ],
+   "a": 1,
+   "c": "“Haver” no sentido de existir é impessoal: “Houve muitos pedidos”."
+  },
+  {
+   "d": "LP",
+   "t": "Qual frase está pontuada corretamente?",
+   "o": [
+    "O servidor, analisou o pedido.",
+    "O servidor analisou, o pedido.",
+    "Ontem, o servidor analisou o pedido.",
+    "O servidor analisou o pedido, e, concedeu o benefício."
+   ],
+   "a": 2,
+   "c": "Não se separa por vírgula o sujeito do verbo nem o verbo do complemento. O adjunto adverbial deslocado para o início (“Ontem”) pode vir separado."
+  },
+  {
+   "d": "LP",
+   "t": "No sentido de presenciar, a construção “Assisti ao atendimento” está de acordo com a norma-padrão.",
+   "o": [
+    "Certo",
+    "Errado"
+   ],
+   "a": 0,
+   "c": "“Assistir” com sentido de ver ou presenciar exige a preposição “a”."
+  },
+  {
+   "d": "LP",
+   "t": "Segundo o Manual de Redação da Presidência da República, qual fecho se usa em comunicação dirigida a autoridade de hierarquia superior à do remetente?",
+   "o": [
+    "Cordialmente",
+    "Atenciosamente",
+    "Respeitosamente",
+    "Sem mais para o momento"
+   ],
+   "a": 2,
+   "c": "“Respeitosamente” para autoridade de hierarquia superior; “Atenciosamente” para a mesma hierarquia, hierarquia inferior ou particulares."
+  },
+  {
+   "d": "DC",
+   "t": "Homens e mulheres são iguais em direitos e obrigações, nos termos da Constituição.",
+   "o": [
+    "Certo",
+    "Errado"
+   ],
+   "a": 0,
+   "c": "É o texto do art. 5º, inciso I."
+  },
+  {
+   "d": "DC",
+   "t": "Qual remédio constitucional protege a liberdade de locomoção?",
+   "o": [
+    "Mandado de segurança",
+    "Habeas corpus",
+    "Habeas data",
+    "Mandado de injunção"
+   ],
+   "a": 1,
+   "c": "O habeas corpus protege o direito de ir, vir e permanecer (art. 5º, LXVIII)."
+  },
+  {
+   "d": "DC",
+   "t": "Os cargos, empregos e funções públicas são acessíveis somente a brasileiros natos.",
+   "o": [
+    "Certo",
+    "Errado"
+   ],
+   "a": 1,
+   "c": "São acessíveis aos brasileiros que preencham os requisitos da lei e também aos estrangeiros, na forma da lei (art. 37, I). Poucos cargos são privativos de brasileiro nato."
+  },
+  {
+   "d": "DC",
+   "t": "O servidor nomeado para cargo efetivo em virtude de concurso público adquire estabilidade após:",
+   "o": [
+    "Um ano de efetivo exercício",
+    "Dois anos de efetivo exercício",
+    "Três anos de efetivo exercício",
+    "Cinco anos de efetivo exercício"
+   ],
+   "a": 2,
+   "c": "Três anos de efetivo exercício, com avaliação especial de desempenho (art. 41 da Constituição)."
+  },
+  {
+   "d": "DA",
+   "t": "Qual destes princípios NÃO está escrito no caput do art. 37 da Constituição?",
+   "o": [
+    "Legalidade",
+    "Impessoalidade",
+    "Razoabilidade",
+    "Eficiência"
+   ],
+   "a": 2,
+   "c": "O caput traz legalidade, impessoalidade, moralidade, publicidade e eficiência. A razoabilidade é princípio reconhecido, mas não está nesse dispositivo."
+  },
+  {
+   "d": "DA",
+   "t": "O INSS é uma autarquia federal e integra a administração pública indireta.",
+   "o": [
+    "Certo",
+    "Errado"
+   ],
+   "a": 0,
+   "c": "Autarquias são pessoas jurídicas de direito público criadas por lei, parte da administração indireta."
+  },
+  {
+   "d": "DA",
+   "t": "A administração pública pode anular seus próprios atos quando ilegais e revogá-los por motivo de conveniência ou oportunidade.",
+   "o": [
+    "Certo",
+    "Errado"
+   ],
+   "a": 0,
+   "c": "É o poder de autotutela, previsto no art. 53 da Lei 9.784/1999 e na Súmula 473 do STF."
+  },
+  {
+   "d": "DA",
+   "t": "Pela Lei 8.112/1990, a posse deve ocorrer em quantos dias, contados da publicação do ato de provimento?",
+   "o": [
+    "10 dias",
+    "15 dias",
+    "30 dias",
+    "60 dias"
+   ],
+   "a": 2,
+   "c": "Trinta dias para a posse (art. 13, § 1º)."
+  },
+  {
+   "d": "DA",
+   "t": "Pela Lei 8.112/1990, o servidor empossado tem 15 dias para entrar em exercício, contados da data da posse.",
+   "o": [
+    "Certo",
+    "Errado"
+   ],
+   "a": 0,
+   "c": "Quinze dias para o exercício (art. 15, § 1º). A banca costuma trocar esse prazo com o de 30 dias da posse."
+  },
+  {
+   "d": "RL",
+   "t": "Qual é a negação de “Todo segurado é contribuinte”?",
+   "o": [
+    "Nenhum segurado é contribuinte",
+    "Algum segurado não é contribuinte",
+    "Todo contribuinte é segurado",
+    "Algum segurado é contribuinte"
+   ],
+   "a": 1,
+   "c": "Para negar “todo A é B”, basta existir um A que não seja B: “algum A não é B”."
+  },
+  {
+   "d": "RL",
+   "t": "A proposição “Se chove, então a rua fica molhada” só é falsa quando chove e a rua não fica molhada.",
+   "o": [
+    "Certo",
+    "Errado"
+   ],
+   "a": 0,
+   "c": "A condicional só é falsa quando a primeira parte é verdadeira e a segunda é falsa."
+  },
+  {
+   "d": "RL",
+   "t": "Em um grupo de 40 pessoas, 25 leem o jornal A, 20 leem o jornal B e 10 leem os dois. Quantas não leem nenhum?",
+   "o": [
+    "0",
+    "5",
+    "10",
+    "15"
+   ],
+   "a": 1,
+   "c": "Leem pelo menos um: 25 + 20 − 10 = 35. Não leem nenhum: 40 − 35 = 5."
+  },
+  {
+   "d": "RL",
+   "t": "Um benefício de R$ 2.000,00 recebe reajuste de 5%. O novo valor é:",
+   "o": [
+    "R$ 2.005,00",
+    "R$ 2.050,00",
+    "R$ 2.100,00",
+    "R$ 2.500,00"
+   ],
+   "a": 2,
+   "c": "5% de 2.000 é 100. Novo valor: 2.100."
+  },
+  {
+   "d": "IN",
+   "t": "Phishing é uma fraude que tenta obter dados pessoais por meio de mensagens que imitam uma comunicação legítima.",
+   "o": [
+    "Certo",
+    "Errado"
+   ],
+   "a": 0,
+   "c": "É a definição cobrada em prova: a isca é uma mensagem que parece vir de fonte confiável."
+  },
+  {
+   "d": "IN",
+   "t": "Uma intranet é:",
+   "o": [
+    "Uma rede pública mundial",
+    "Uma rede privada de uma organização que usa as mesmas tecnologias da internet",
+    "Um tipo de vírus",
+    "Um navegador de internet"
+   ],
+   "a": 1,
+   "c": "Intranet é rede interna, de acesso restrito, baseada nos mesmos protocolos da internet."
+  },
+  {
+   "d": "ET",
+   "t": "Pelo Código de Ética do Servidor Público Federal (Decreto 1.171/1994), o servidor não decide apenas entre o legal e o ilegal, mas principalmente entre o honesto e o desonesto.",
+   "o": [
+    "Certo",
+    "Errado"
+   ],
+   "a": 0,
+   "c": "É a regra deontológica II do Decreto 1.171/1994, uma das mais cobradas."
+  },
+  {
+   "d": "ET",
+   "t": "Pelo Decreto 1.171/1994, os fatos da vida privada do servidor não têm qualquer reflexo sobre o seu conceito na vida funcional.",
+   "o": [
+    "Certo",
+    "Errado"
+   ],
+   "a": 1,
+   "c": "O decreto diz o contrário: fatos e atos da vida privada podem acrescer ou diminuir o bom conceito do servidor na vida funcional (regra VI)."
+  },
+  {
+   "d": "ET",
+   "t": "Qual é a pena aplicável ao servidor pela comissão de ética, segundo o Decreto 1.171/1994?",
+   "o": [
+    "Demissão",
+    "Suspensão",
+    "Censura",
+    "Multa"
+   ],
+   "a": 2,
+   "c": "A comissão de ética aplica somente a censura. Demissão e suspensão são penalidades disciplinares da Lei 8.112/1990."
+  }
+ ]
+}
