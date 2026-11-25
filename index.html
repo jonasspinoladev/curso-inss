@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Curso INSS</title>
+<title>Central de estudos · INSS, BACEN e Receita</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
@@ -66,6 +66,30 @@ details.disc > summary span{font-family:var(--body);font-weight:400;font-size:14
 .pill.good{background:var(--ok-soft);border-color:var(--ok);color:var(--ink)}
 .pill.mid{background:var(--warn-soft);border-color:var(--warn);color:var(--ink)}
 .pill.low{background:var(--bad-soft);border-color:var(--bad);color:var(--ink)}
+.mod{display:flex;justify-content:space-between;gap:8px;align-items:baseline;flex-wrap:wrap}
+.tag{font-size:11px;font-weight:700;letter-spacing:.02em;text-transform:none;padding:2px 8px;border-radius:999px;background:var(--accent-soft);color:var(--ink)}
+.tag.only{background:var(--bg);border:1px solid var(--line);color:var(--muted)}
+.nucleo{display:flex;flex-direction:column;gap:6px;margin-top:8px}
+.nucleo h3{font-size:19px}
+.later{margin:0;padding-left:20px;font-size:15px;color:var(--muted)}
+.conc{display:flex;flex-direction:column;gap:4px;padding:10px 0;border-top:1px solid var(--line)}
+.conc:first-of-type{border-top:0;padding-top:0}
+.conc b{font-family:var(--display);font-size:17px}
+.conc .line{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap;font-size:15px}
+.pill.ofi{background:var(--ok-soft);border-color:var(--ok);color:var(--ink)}
+.pill.prev{background:var(--warn-soft);border-color:var(--warn);color:var(--ink)}
+.today .blk{display:flex;flex-direction:column;gap:2px}
+.today .blk b{font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.next{display:grid;grid-template-columns:52px 1fr auto;gap:10px;align-items:center;padding:10px 12px;border:1px solid var(--line);border-radius:8px;text-decoration:none;color:var(--ink);min-height:44px}
+.next .code{font-weight:700;font-size:14px;color:var(--accent)}
+.next.off{color:var(--muted)} .next.off .code{color:var(--muted)}
+.week{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;font-size:15px}
+.week li{display:grid;grid-template-columns:76px 1fr;gap:8px}
+.week li.now{font-weight:700}
+details.more > summary{cursor:pointer;font-weight:600;color:var(--accent)}
+details.more[open] > summary{margin-bottom:8px}
+.revgrp{display:flex;flex-direction:column;gap:6px}
+.revgrp h3{font-size:16px}
 
 /* aula */
 .lesson{display:flex;flex-direction:column;gap:14px}
@@ -122,15 +146,17 @@ details.disc > summary span{font-family:var(--body);font-weight:400;font-size:14
 
 <script>
 var DOCS = [
+  ["Plano integrado: INSS, Banco Central e Receita (24/11/2026)", "https://claude.ai/artifact/Bb2181uYYNkWdfpywU9G3u"],
   ["Etapa 1: relatório da pesquisa", "https://claude.ai/artifact/QwrKyEtMV8FQtALUftWwJB"],
   ["Etapa 2: conteúdo e mapa do curso", "https://claude.ai/artifact/7DSyxgPXayR6XbgffZMm9S"],
   ["Etapa 3: cronograma de estudos", "https://claude.ai/artifact/Fd2BFY4tPBJWeJf6ADp9dk"]
 ];
-var DNAMES = {PV:"Direito Previdenciário",LP:"Língua Portuguesa",DC:"Direito Constitucional",DA:"Direito Administrativo",RL:"Raciocínio Lógico",IN:"Informática",ET:"Ética no Serviço Público",TP:"Técnica de prova"};
-var DORDER = ["PV","LP","DC","DA","RL","IN","ET","TP"];
+var DNAMES = {PV:"Direito Previdenciário",LP:"Língua Portuguesa",DC:"Direito Constitucional",DA:"Direito Administrativo",RL:"Raciocínio Lógico",IN:"Informática",ET:"Ética no Serviço Público",TP:"Técnica de prova",ES:"Estatística",DE:"Diagnóstico das específicas"};
+var DORDER = ["PV","LP","DC","DA","RL","IN","ET","TP","ES","DE"];
 
 var app = document.getElementById("app"), bar = document.getElementById("bar");
 var catalog = null, ready = [], notas = {}, db = null, dbState = "espera"; // espera | conta | local
+var plano = null; // data/plano.json: fase, semana, concursos (opcional)
 var cur = null; // teste aberto: {id, data, answers, graded, diag}
 
 function el(tag, cls, text){ var n = document.createElement(tag); if(cls) n.className = cls; if(text != null) n.textContent = text; return n; }
@@ -202,9 +228,9 @@ function refreshHome(){ if(route() === "inicio" && catalog) renderHome(); }
 function renderHome(){
   cur = null; bar.classList.remove("show"); app.textContent = "";
   var head = el("header", "stack");
-  head.appendChild(el("span", "kicker", "Técnico do Seguro Social · versão A"));
-  head.appendChild(el("h1", null, "Curso INSS"));
-  head.appendChild(el("p", "muted", "Central do curso. Cada aula criada fica aqui, com o teste que você pode refazer quando quiser."));
+  head.appendChild(el("span", "kicker", "INSS · Banco Central · Receita Federal"));
+  head.appendChild(el("h1", null, "Central de estudos"));
+  head.appendChild(el("p", "muted", "Plano integrado para os três concursos. Cada aula criada fica aqui, com o teste que você pode refazer quando quiser."));
   app.appendChild(head);
 
   var st = el("div", "status" + (dbState === "local" ? " local" : ""));
@@ -223,6 +249,8 @@ function renderHome(){
     var x = el("div", "tile"); x.appendChild(el("b", null, t[0])); x.appendChild(el("span", null, t[1])); tiles.appendChild(x);
   });
   app.appendChild(tiles);
+
+  if(plano){ renderToday(); renderReviews(); renderConcursos(); }
 
   var start = el("section", "card");
   start.appendChild(el("span", "kicker", "Comece aqui"));
@@ -248,14 +276,17 @@ function renderHome(){
 
   var sec = el("section", "stack");
   sec.appendChild(el("h2", null, "Aulas"));
-  sec.appendChild(el("p", "muted small", "As aulas são criadas sob demanda. Peça no chat “próxima aula” ou o código, como PV01."));
-  catalog.disciplinas.forEach(function(d, i){
-    var det = el("details", "disc"); if(i === 0) det.open = true;
+  sec.appendChild(el("p", "muted small", "As aulas são criadas sob demanda. Peça no chat “próxima aula” ou o código, como DA01."));
+  var openCode = todayPlan() && todayPlan().disc.length ? todayPlan().disc[0] : null;
+  function discBlock(d, i){
+    var det = el("details", "disc"); if(openCode ? d.id === openCode : i === 0) det.open = true;
     var n = 0, c = 0;
     d.modulos.forEach(function(m){ m.aulas.forEach(function(a){ n++; if(ready.indexOf(a[0].toLowerCase()) >= 0) c++; }); });
     var sum = el("summary"); sum.appendChild(document.createTextNode(d.nome)); sum.appendChild(el("span", null, c + " de " + n + " criadas")); det.appendChild(sum);
     d.modulos.forEach(function(m, k){
-      det.appendChild(el("div", "mod", "Módulo " + (k + 1) + " · " + m.nome));
+      var mh = el("div", "mod"); mh.appendChild(el("span", null, "Módulo " + (k + 1) + " · " + m.nome));
+      if(m.tag) mh.appendChild(el("span", "tag" + (/^Só/.test(m.tag) ? " only" : ""), m.tag));
+      det.appendChild(mh);
       m.aulas.forEach(function(a){
         var id = a[0].toLowerCase(), on = ready.indexOf(id) >= 0;
         var r = el(on ? "a" : "div", "row" + (on ? "" : " off")); if(on) r.href = "#" + id;
@@ -263,8 +294,21 @@ function renderHome(){
         var p = pillFor(id); r.appendChild(el("span", p[0], p[1])); det.appendChild(r);
       });
     });
-    sec.appendChild(det);
-  });
+    return det;
+  }
+  if(catalog.nucleos){
+    catalog.nucleos.forEach(function(nc){
+      var box = el("div", "nucleo");
+      box.appendChild(el("h3", null, nc.nome));
+      if(nc.desc) box.appendChild(el("p", "muted small", nc.desc));
+      sec.appendChild(box);
+      catalog.disciplinas.forEach(function(d, i){ if(d.nucleo === nc.id) sec.appendChild(discBlock(d, i)); });
+      if(nc.depois && nc.depois.length){
+        sec.appendChild(el("p", "small muted", "Entram depois dos editais:"));
+        var ul = el("ul", "later"); nc.depois.forEach(function(t){ ul.appendChild(el("li", null, t)); }); sec.appendChild(ul);
+      }
+    });
+  } else catalog.disciplinas.forEach(function(d, i){ sec.appendChild(discBlock(d, i)); });
   app.appendChild(sec);
 
   var bk = el("section", "card");
@@ -303,6 +347,116 @@ function renderHome(){
   var ul = el("div", "stack");
   DOCS.forEach(function(d){ var a = el("a", null, d[0]); a.href = d[1]; a.target = "_blank"; a.rel = "noopener"; ul.appendChild(a); });
   docs.appendChild(ul); app.appendChild(docs);
+}
+
+/* ---------- plano integrado: hoje, revisões e concursos ---------- */
+var DAY = 864e5;
+function isoLocal(d){ var m = d.getMonth() + 1, dd = d.getDate(); return d.getFullYear() + "-" + (m < 10 ? "0" : "") + m + "-" + (dd < 10 ? "0" : "") + dd; }
+function brDate(iso){ var p = iso.split("-"); return p[2] + "/" + p[1] + "/" + p[0]; }
+function todayPlan(){
+  if(!plano || !plano.semana) return null;
+  var w = new Date().getDay();
+  for(var i = 0; i < plano.semana.length; i++) if(plano.semana[i].dia === w) return plano.semana[i];
+  return null;
+}
+function findAula(code){
+  var r = null;
+  catalog.disciplinas.forEach(function(d){ d.modulos.forEach(function(m){ m.aulas.forEach(function(a){ if(a[0] === code) r = a; }); }); });
+  return r;
+}
+function nextIn(disc){
+  var r = null;
+  catalog.disciplinas.forEach(function(d){ if(d.id !== disc) return; d.modulos.forEach(function(m){ m.aulas.forEach(function(a){
+    var id = a[0].toLowerCase(); if(!r && !(notas[id] && notas[id].total)) r = a;
+  }); }); });
+  return r;
+}
+function aulaRow(a){
+  var id = a[0].toLowerCase(), on = ready.indexOf(id) >= 0;
+  var r = el(on ? "a" : "div", "next" + (on ? "" : " off")); if(on) r.href = "#" + id;
+  r.appendChild(el("span", "code", a[0])); r.appendChild(el("span", null, a[1]));
+  var p = pillFor(id); r.appendChild(el("span", p[0], p[1])); return r;
+}
+
+function renderToday(){
+  var t = todayPlan(), f = plano.fase || {}, bl = f.blocos || ["1h30", "30 min"];
+  var c = el("section", "card today");
+  c.appendChild(el("span", "kicker", (f.nome ? f.nome + " · " : "") + (t ? "hoje, " + t.nome.toLowerCase() : "hoje")));
+  if(t){
+    c.appendChild(el("h2", null, t.titulo));
+    [["Bloco 1 · " + bl[0], t.bloco1], ["Bloco 2 · " + bl[1], t.bloco2]].forEach(function(b){
+      var x = el("div", "blk"); x.appendChild(el("b", null, b[0])); x.appendChild(el("p", null, b[1])); c.appendChild(x);
+    });
+    if(t.dia === 0 && (plano.revisoes30 || []).indexOf(isoLocal(new Date())) >= 0)
+      c.appendChild(el("p", "status", "Hoje é dia de revisão de 30 dias: troque o simulado pela revisão das aulas de um mês atrás."));
+    (t.disc || []).forEach(function(code){
+      var a = nextIn(code); if(!a) return;
+      c.appendChild(el("p", "small muted", "Próxima aula de " + (DNAMES[code] || code) + ":"));
+      c.appendChild(aulaRow(a));
+      if(ready.indexOf(a[0].toLowerCase()) < 0) c.appendChild(el("p", "small muted", "Peça no chat: “criar a aula " + a[0] + "”."));
+    });
+  }
+  var det = el("details", "more"); det.appendChild(el("summary", null, "Semana inteira e meta da fase"));
+  var ul = el("ul", "week");
+  plano.semana.slice().sort(function(a, b){ return (a.dia + 6) % 7 - (b.dia + 6) % 7; }).forEach(function(s){
+    var li = el("li", s === t ? "now" : null); li.appendChild(el("span", null, s.nome)); li.appendChild(el("span", null, s.titulo)); ul.appendChild(li);
+  });
+  det.appendChild(ul);
+  var info = el("div", "stack"); info.style.marginTop = "10px";
+  [f.periodo, f.carga, f.divisao, f.meta].forEach(function(s){ if(s) info.appendChild(el("p", "small muted", s)); });
+  det.appendChild(info); c.appendChild(det);
+  app.appendChild(c);
+}
+
+function renderReviews(){
+  var now = Date.now(), g = {d1:[], d7:[], d30:[]};
+  Object.keys(notas).forEach(function(id){
+    if(id === "diagnostico") return;
+    var n = notas[id]; if(!n || !n.total || !n.quando) return;
+    var first = Date.parse(n.primeira || n.quando), last = Date.parse(n.quando);
+    if(isNaN(first) || isNaN(last)) return;
+    var age = Math.floor((now - first) / DAY);
+    if(age >= 30){ if(last < first + 29 * DAY) g.d30.push(id); }
+    else if(age >= 7){ if(last < first + 6 * DAY) g.d7.push(id); }
+    else if(age >= 1 && age <= 2 && (n.tentativas || 1) === 1) g.d1.push(id);
+  });
+  var c = el("section", "card");
+  c.appendChild(el("span", "kicker", "Revisões pendentes"));
+  var any = g.d1.length + g.d7.length + g.d30.length;
+  if(!any) c.appendChild(el("p", "muted", "Nada pendente hoje. Cada aula volta aqui 1, 7 e 30 dias depois do primeiro teste."));
+  [["d1", "24 horas: releia o resumo e as questões erradas"], ["d7", "7 dias: refaça o teste da aula"], ["d30", "30 dias: refaça o teste e escreva um resumo de uma página"]].forEach(function(k){
+    if(!g[k[0]].length) return;
+    var grp = el("div", "revgrp"); grp.appendChild(el("h3", null, k[1]));
+    g[k[0]].forEach(function(id){ grp.appendChild(aulaRow(findAula(id.toUpperCase()) || [id.toUpperCase(), notas[id].titulo || ""])); });
+    c.appendChild(grp);
+  });
+  var today = isoLocal(new Date()), nx = (plano.revisoes30 || []).filter(function(d){ return d >= today; })[0];
+  if(nx) c.appendChild(el("p", "small muted", "Próximo domingo de revisão de 30 dias: " + brDate(nx) + "."));
+  app.appendChild(c);
+}
+
+function renderConcursos(){
+  var c = el("section", "card");
+  c.appendChild(el("span", "kicker", "Situação dos concursos"));
+  c.appendChild(el("p", "small muted", "Conferida em " + (plano.atualizado || "–") + ". Oficial: ato ou comunicado do órgão. Previsão: informado pelo órgão, ainda sem ato."));
+  var list = el("div");
+  (plano.concursos || []).forEach(function(k){
+    var x = el("div", "conc"); x.appendChild(el("b", null, k.nome));
+    var l1 = el("div", "line"); l1.appendChild(el("span", null, k.situacao)); if(k.rotulo) l1.appendChild(el("span", "pill ofi", k.rotulo)); x.appendChild(l1);
+    var l2 = el("div", "line"); l2.appendChild(el("span", null, k.marco)); if(k.marcoRotulo) l2.appendChild(el("span", "pill prev", k.marcoRotulo));
+    if(k.data){
+      var left = Math.round((Date.parse(k.data + "T00:00:00") - Date.parse(isoLocal(new Date()) + "T00:00:00")) / DAY);
+      l2.appendChild(el("span", "muted small", left > 1 ? "prazo em " + left + " dias" : left === 1 ? "prazo amanhã" : left === 0 ? "prazo hoje" : "prazo vencido: confira se o edital saiu"));
+    }
+    x.appendChild(l2); list.appendChild(x);
+  });
+  c.appendChild(list);
+  if(plano.alvo) c.appendChild(el("p", "small", plano.alvo));
+  if(plano.documento){
+    var a = el("a", "btn ghost", "Abrir o plano completo"); a.href = plano.documento; a.target = "_blank"; a.rel = "noopener";
+    var w = el("div", "btns"); w.appendChild(a); c.appendChild(w);
+  }
+  app.appendChild(c);
 }
 
 /* ---------- aula e teste ---------- */
@@ -398,6 +552,7 @@ function grade(){
   var old = notas[cur.id] || {};
   var rec = {id:cur.id, titulo:cur.data.titulo, total:Q.length, ultima:hit, melhor:Math.max(hit, old.melhor || 0),
     tentativas:(old.tentativas || 0) + 1, respostas:cur.answers.slice(), quando:new Date().toISOString()};
+  rec.primeira = old.primeira || old.quando || rec.quando; // data do primeiro teste, base das revisões de 1, 7 e 30 dias
   if(Object.keys(by).length) rec.porDisciplina = by;
   lsSet("inss-rascunho-" + cur.id, null);
   paintQuiz();
@@ -434,6 +589,7 @@ window.addEventListener("hashchange", render);
 
 Promise.all([getJSON("data/catalogo.json"), getJSON("data/prontas.json")]).then(function(v){
   catalog = v[0]; ready = v[1].prontas || []; render(); initNotas();
+  getJSON("data/plano.json").then(function(p){ plano = p; refreshHome(); }).catch(function(){});
 }).catch(function(){ app.textContent = ""; app.appendChild(el("p", null, "Não foi possível carregar o curso. Verifique a conexão e abra a página de novo.")); });
 </script>
 </body>

@@ -1,0 +1,115 @@
+{
+ "atualizado": "24/11/2026",
+ "documento": "https://claude.ai/artifact/Bb2181uYYNkWdfpywU9G3u",
+ "fase": {
+  "nome": "Fase 1 · Núcleo comum",
+  "periodo": "De 25/11/2026 até a publicação dos editais do Banco Central e da Receita (dezembro).",
+  "carga": "2 h por dia, 7 dias por semana. Na Fase 2 passa a 3 h por dia.",
+  "divisao": "75% núcleo comum · 15% Previdenciário · 10% teste das específicas",
+  "meta": "Até 31/12/2026: DA01–DA06, RL01–RL06, DC01–DC04, PV04–PV08 e ES01–ES04. Português só em questões FGV; aula de LP só no assunto em que errar mais de 30%.",
+  "blocos": [
+   "1h30",
+   "30 min"
+  ]
+ },
+ "semana": [
+  {
+   "dia": 0,
+   "nome": "Domingo",
+   "titulo": "Simulado e revisão de 7 dias",
+   "bloco1": "Simulado curto: 25 questões FGV mistas, em 1 h. No último domingo do mês, troque pelo bloco de revisão de 30 dias (2 h).",
+   "bloco2": "Revisão de 7 dias: refaça o teste das aulas listadas em Revisões pendentes.",
+   "disc": []
+  },
+  {
+   "dia": 1,
+   "nome": "Segunda",
+   "titulo": "Português (questões FGV) + Estatística",
+   "bloco1": "45 min de questões FGV de Português + 45 min de Estatística (aula e questões).",
+   "bloco2": "Revisão de 24 h do simulado de domingo.",
+   "disc": [
+    "ES"
+   ]
+  },
+  {
+   "dia": 2,
+   "nome": "Terça",
+   "titulo": "Direito Administrativo",
+   "bloco1": "45 min de aula + 45 min de questões.",
+   "bloco2": "Revisão de 24 h de Português e Estatística.",
+   "disc": [
+    "DA"
+   ]
+  },
+  {
+   "dia": 3,
+   "nome": "Quarta",
+   "titulo": "Raciocínio Lógico",
+   "bloco1": "45 min de aula + 45 min de questões.",
+   "bloco2": "Revisão de 24 h de Direito Administrativo.",
+   "disc": [
+    "RL"
+   ]
+  },
+  {
+   "dia": 4,
+   "nome": "Quinta",
+   "titulo": "Direito Constitucional",
+   "bloco1": "45 min de aula + 45 min de questões.",
+   "bloco2": "Revisão de 24 h de Raciocínio Lógico.",
+   "disc": [
+    "DC"
+   ]
+  },
+  {
+   "dia": 5,
+   "nome": "Sexta",
+   "titulo": "Direito Previdenciário",
+   "bloco1": "45 min de aula + 45 min de questões, na ordem do catálogo. Até PV24 também cai na Receita.",
+   "bloco2": "Revisão de 24 h de Direito Constitucional.",
+   "disc": [
+    "PV"
+   ]
+  },
+  {
+   "dia": 6,
+   "nome": "Sábado",
+   "titulo": "Teste das específicas",
+   "bloco1": "Questões oficiais de TI do Banco Central e de Fluência em Dados da Receita. Anote as lacunas.",
+   "bloco2": "Revisão de 24 h de Previdenciário.",
+   "disc": [
+    "DE"
+   ]
+  }
+ ],
+ "revisoes30": [
+  "2026-12-27",
+  "2027-01-31",
+  "2027-02-28"
+ ],
+ "alvo": "O alvo da prova de março sai pela regra quando os editais forem publicados: BACEN Auditor-TI se houver área de TI; senão, Receita Analista-Tributário.",
+ "concursos": [
+  {
+   "nome": "Banco Central",
+   "situacao": "Autorizado (170 vagas) · FGV contratada",
+   "rotulo": "Oficial",
+   "marco": "Edital até 30/12/2026",
+   "marcoRotulo": "Previsão",
+   "data": "2026-12-30"
+  },
+  {
+   "nome": "Receita Federal",
+   "situacao": "Autorizado (146 vagas) · FGV escolhida",
+   "rotulo": "Oficial",
+   "marco": "Edital em dezembro de 2026",
+   "marcoRotulo": "Previsão"
+  },
+  {
+   "nome": "INSS",
+   "situacao": "Sem autorização · pedido de vagas no MGI",
+   "rotulo": "Oficial",
+   "marco": "Autorização talvez em 2027",
+   "marcoRotulo": "Previsão vaga"
+  }
+ ]
+}
