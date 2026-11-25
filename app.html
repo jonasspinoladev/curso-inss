@@ -462,7 +462,7 @@ function renderConcursos(){
 /* ---------- aula e teste ---------- */
 function openItem(id){
   app.textContent = ""; bar.classList.remove("show");
-  var back = el("a", "back", "← Central do curso"); back.href = "#inicio"; app.appendChild(back);
+  var back = el("a", "back", "← Central de estudos"); back.href = "#inicio"; app.appendChild(back);
   if(ready.indexOf(id) < 0){
     var c = el("section", "card");
     c.appendChild(el("h2", null, id.toUpperCase() + " ainda não foi criada"));
