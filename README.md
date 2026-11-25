@@ -10,3 +10,4 @@ Material da preparação integrada para INSS, Banco Central e Receita Federal: c
 - `data/aulas/*.json`: conteúdo e teste de cada aula.
 
 A página local (`index.html` em `Documents/inss`) também busca `app.html` e `data/` deste repositório a cada abertura.
+
